@@ -1,4 +1,4 @@
-package dgsw.proj.knowledgender
+package dgsw.proj.convention
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("dgsw.proj.knowledgender", appContext.packageName)
+        assertEquals("dgsw.proj.convention.test", appContext.packageName)
     }
 }

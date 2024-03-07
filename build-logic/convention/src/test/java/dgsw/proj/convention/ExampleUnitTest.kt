@@ -1,4 +1,4 @@
-package dgsw.proj.knowledgender
+package dgsw.proj.convention
 
 import org.junit.Test
 
