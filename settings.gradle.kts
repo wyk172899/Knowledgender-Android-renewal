@@ -1,4 +1,5 @@
 pluginManagement {
+    includeBuild("build-logic")
     repositories {
         google()
         mavenCentral()
@@ -15,5 +16,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "knowledgender"
 include(":app")
-include(":buildlogic")
- 
