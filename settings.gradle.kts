@@ -16,3 +16,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "knowledgender"
 include(":app")
+include(":feature")
+include(":feature:main")
+include(":feature:cardnews-detail")

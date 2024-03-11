@@ -25,11 +25,11 @@ dependencies {
 gradlePlugin {
     plugins {
         register("androidApplication") {
-            id = "nowinandroid.android.application"
+            id = "knowledgender.android.application"
             implementationClass = "AndroidApplicationConventionPlugin"
         }
         register("androidLibrary") {
-            id = "nowinandroid.android.library"
+            id = "knowledgender.android.library"
             implementationClass = "AndroidLibraryConventionPlugin"
         }
     }
