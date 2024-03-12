@@ -1,5 +1,6 @@
 import com.android.build.api.dsl.ApplicationExtension
 import com.android.build.api.variant.ApplicationAndroidComponentsExtension
+import dgsw.proj.convention.configureGradleManagedDevices
 import dgsw.proj.convention.configureKotlinAndroid
 import dgsw.proj.convention.configurePrintApksTask
 import org.gradle.api.Plugin
@@ -17,6 +18,7 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
             extensions.configure<ApplicationExtension> {
                 configureKotlinAndroid(this)
                 defaultConfig.targetSdk = 34
+                configureGradleManagedDevices(this)
             }
             extensions.configure<ApplicationAndroidComponentsExtension> {
                 configurePrintApksTask(this)
@@ -24,3 +26,4 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
         }
     }
 }
+
