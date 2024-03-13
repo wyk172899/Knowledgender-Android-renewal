@@ -1,10 +1,10 @@
 plugins {
-    id("com.android.application")
-    id("org.jetbrains.kotlin.android")
+    id("convention.android.hilt")
+    id("convention.android.application")
 }
 
 android {
-    namespace = "dgsw.proj.knowledgender"
+    namespace = "dgsw.proj"
     compileSdk = 34
 
     defaultConfig {
@@ -51,6 +51,8 @@ android {
 
 dependencies {
 
+
+
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
     implementation("androidx.activity:activity-compose:1.8.2")
@@ -66,4 +68,6 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+
+
 }

@@ -2,10 +2,10 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     `kotlin-dsl`
-    `kotlin-dsl-precompiled-script-plugins`
+    //`kotlin-dsl-precompiled-script-plugins`
 }
 
-group = "dgsw.proj.convention"
+group = "dgsw.proj.convention.build-logic"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_17
@@ -28,23 +28,23 @@ dependencies {
 gradlePlugin {
     plugins {
         register("androidApplicationCompose") {
-            id = "knowledgender.android.application.compose"
+            id = "convention.android.application.compose"
             implementationClass = "AndroidApplicationComposeConventionPlugin"
         }
         register("androidApplication") {
-            id = "knowledgender.android.application"
+            id = "convention.android.application"
             implementationClass = "AndroidApplicationConventionPlugin"
         }
         register("androidHilt") {
-            id = "knowledgender.android.hilt"
+            id = "convention.android.hilt"
             implementationClass = "AndroidHiltConventionPlugin"
         }
         register("androidFlavors") {
-            id = "knowledgender.android.application.flavors"
+            id = "convention.android.application.flavors"
             implementationClass = "AndroidApplicationFlavorsConventionPlugin"
         }
         register("jvmLibrary") {
-            id = "knowledgender.jvm.library"
+            id = "convention.jvm.library"
             implementationClass = "JvmLibraryConventionPlugin"
         }
     }
