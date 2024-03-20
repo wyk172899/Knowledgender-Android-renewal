@@ -19,9 +19,9 @@ tasks.withType<KotlinCompile>().configureEach {
 }
 
 dependencies {
-    implementation(libs.kotlin.gradlePlugin)
-    implementation(libs.ksp.gradlePlugin)
-    implementation(libs.android.gradlePlugin)
+    compileOnly(libs.kotlin.gradlePlugin)
+    compileOnly(libs.ksp.gradlePlugin)
+    compileOnly(libs.android.gradlePlugin)
 }
 
 
@@ -47,5 +47,19 @@ gradlePlugin {
             id = "convention.jvm.library"
             implementationClass = "JvmLibraryConventionPlugin"
         }
+        register("composeLibrary") {
+            id = "convention.compose.library"
+            implementationClass = "AndroidLibraryComposeConventionPlugin"
+        }
+        register("library") {
+            id = "convention.android.library"
+            implementationClass = "AndroidLibraryConventionPlugin"
+        }
+        register("feature") {
+            id = "convention.android.feature"
+            implementationClass = "AndroidFeatureConventionPlugin"
+        }
+
+
     }
 }

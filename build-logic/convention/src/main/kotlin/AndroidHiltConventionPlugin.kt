@@ -1,3 +1,4 @@
+import com.android.build.api.dsl.CommonExtension
 import dgsw.proj.convention.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
