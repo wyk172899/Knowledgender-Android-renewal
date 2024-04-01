@@ -14,7 +14,6 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
         with(target) {
             pluginManager.apply {
                 apply("convention.android.library")
-                apply("convention.android.hilt")
             }
             extensions.configure<LibraryExtension> {
                 defaultConfig {
@@ -24,8 +23,8 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
             }
 
             dependencies {
-                add("implementation", project(":core:designsystem"))
                 add("implementation", project(":core:domain"))
+                add("implementation", project(":core:common"))
 
                 add("testImplementation", kotlin("test"))
                 add("testImplementation", project(":core:testing"))
