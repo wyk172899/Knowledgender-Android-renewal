@@ -1,6 +1,7 @@
 [versions]
 androidxActivity = "1.8.0-alpha06"
-androidGradlePlugin = "8.1.4"
+androidGradlePlugin = "8.1.1"
+bottomSheet = "1.2.0-alpha02"
 googleOss = "17.0.1"
 googleOssPlugin = "0.10.6"
 kotlin = "1.9.0"
@@ -18,10 +19,11 @@ kotlinxCoroutines = "1.6.4"
 androidxLifecycle = "2.7.0"
 androidxHiltNavigationCompose = "1.0.0"
 org-jetbrains-kotlin-android = "1.8.0"
-androidxNavigation = "2.5.3"
+androidxNavigation = "2.7.4"
 androidxDataStore = "1.0.0"
 androidxComposeCompiler = "1.5.2"
 androidxComposeBom = "2023.06.01"
+desugar = "2.0.3"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
@@ -33,6 +35,9 @@ material = { group = "com.google.android.material", name = "material", version.r
 google-oss-licenses = { group = "com.google.android.gms", name = "play-services-oss-licenses", version.ref = "googleOss" }
 google-oss-licenses-plugin = { group = "com.google.android.gms", name = "oss-licenses-plugin", version.ref = "googleOssPlugin" }
 androidx-dataStore-core = { group = "androidx.datastore", name = "datastore", version.ref = "androidxDataStore" }
+
+#desugar
+andoird-desugar = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "desugar" }
 
 #kotlinx
 kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "kotlinxCoroutines" }
@@ -49,11 +54,18 @@ androidx-lifecycle-runtimeCompose = { group = "androidx.lifecycle", name = "life
 androidx-lifecycle-viewModelCompose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "androidxLifecycle" }
 
 #compose
+androidx-compose-foundation = { group = "androidx.compose.foundation", name = "foundation" }
+androidx-compose-foundation-layout = { group = "androidx.compose.foundation", name = "foundation-layout" }
 androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-compose-bottomsheet = {group = "androidx.compose.matreial3",name="material3",version.ref = "bottomSheet"}
 androidx-compose-runtime = { group = "androidx.compose.runtime", name = "runtime" }
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "androidxActivity" }
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidxComposeBom" }
 androidx-compose-ui-testManifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidx-compose-ui-test = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-compose-ui-util = { group = "androidx.compose.ui", name = "ui-util" }
 
 #navigation
 androidx-hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "androidxHiltNavigationCompose" }

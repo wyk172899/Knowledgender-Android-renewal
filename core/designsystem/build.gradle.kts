@@ -1,30 +1,23 @@
 plugins {
     id("convention.android.library")
     id("convention.compose.library")
-
 }
 
 android {
-    namespace = "dgsw.proj.designsystem"
-
+    namespace = "site.algosipeosseong.designsystem"
     defaultConfig {
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
 }
 
 dependencies {
-
-    implementation("androidx.compose.ui:ui")
-    implementation("androidx.compose.ui:ui-graphics")
-    implementation("androidx.compose.ui:ui-tooling-preview")
-    implementation("androidx.compose.material3:material3")
-
+    api(libs.androidx.activity.compose)
+    api(libs.androidx.compose.material3)
+    api(libs.androidx.compose.runtime)
     implementation(libs.core.ktx)
     implementation(libs.appcompat)
     implementation(libs.material)
-    implementation(libs.androidx.navigation.runtime.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
